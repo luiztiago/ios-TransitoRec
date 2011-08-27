@@ -7,9 +7,11 @@
 //
 
 #import "RootViewController.h"
+#import "Camera.h"
 
 @implementation RootViewController
-
+@synthesize items;
+@synthesize activityIndicator;
 
 - (void)viewDidLoad
 {

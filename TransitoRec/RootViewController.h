@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RootViewController : UITableViewController
+@interface RootViewController : UITableViewController {
+    UIActivityIndicatorView *activityIndicator;
+    NSArray *items;
+}
+
+@property (retain, nonatomic) UIActivityIndicatorView *activityIndicator;
+@property (retain, nonatomic) NSArray *items;
 
 @end
