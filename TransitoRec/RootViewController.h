@@ -7,13 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Parser.h"
 
-@interface RootViewController : UITableViewController {
+@interface RootViewController : UITableViewController <ParserDelegate> {
     UIActivityIndicatorView *activityIndicator;
-    NSArray *items;
+    NSArray *pontos;
 }
 
 @property (retain, nonatomic) UIActivityIndicatorView *activityIndicator;
-@property (retain, nonatomic) NSArray *items;
+@property (retain, nonatomic) NSArray *pontos;
 
 @end

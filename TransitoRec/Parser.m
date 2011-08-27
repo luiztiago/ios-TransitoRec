@@ -14,10 +14,11 @@
 @synthesize items;
 @synthesize item;
 @synthesize currentElement;
-@synthesize currentTitle;
-@synthesize currentLink;
-@synthesize currentContent;
-@synthesize currentDescription;
+@synthesize currentDescricao;
+@synthesize currentSentido;
+@synthesize currentImgUrl;
+@synthesize currentLatitude;
+@synthesize currentLongitude;
 
 
 //Método que inicia o parser
@@ -51,7 +52,7 @@
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
 {
-    NSString * errorString = [NSString stringWithFormat:@"Não foi possivel fazer donwload dos dados (Erro %i )", [error code]];
+    NSString * errorString = [NSString stringWithFormat:@"Não foi possivel fazer download dos dados (Erro %i )", [error code]];
 	
     UIAlertView * errorAlert = [[UIAlertView alloc] initWithTitle:@"Error no carregamento dos dados" message:errorString delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [errorAlert show];
@@ -77,39 +78,43 @@
 {
 	currentElement = [elementName copy];
 	
-    if ([elementName isEqualToString:@"item"]) {
+    if ([elementName isEqualToString:@"Ponto"]) {
         item = [[NSMutableDictionary alloc] init];
-        self.currentTitle = [[NSMutableString alloc] init];
-        self.currentDescription = [[NSMutableString alloc] init];
-        self.currentLink = [[NSMutableString alloc] init];
-		self.currentContent = [[NSMutableString alloc] init];
+        self.currentDescricao = [[NSMutableString alloc] init];
+        self.currentSentido = [[NSMutableString alloc] init];
+        self.currentImgUrl = [[NSMutableString alloc] init];
+		self.currentLatitude = [[NSMutableString alloc] init];
+        self.currentLongitude = [[NSMutableString alloc] init];
     }
-	
     
 }
 
 - (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName{
 	
-    if ([elementName isEqualToString:@"item"]) {
-        [item setObject:self.currentTitle forKey:@"title"];
-        [item setObject:self.currentLink forKey:@"link"];
-        [item setObject:self.currentDescription forKey:@"description"];
-		[item setObject:self.currentContent forKey:@"content"];
+    if ([elementName isEqualToString:@"Ponto"]) {
+        [item setObject:self.currentDescricao forKey:@"Descricao"];
+        [item setObject:self.currentSentido forKey:@"Sentido"];
+        [item setObject:self.currentImgUrl forKey:@"ImgVisWEB"];
+		[item setObject:self.currentLatitude forKey:@"Latitude"];
+        [item setObject:self.currentLongitude forKey:@"Longitude"];
 
-		
+		////*currentDescricao, *currentSentido, *currentImgUrl, *currentLatitude, *currentLongitude;
+        
         [items addObject:[item copy]];
     }
 }
 
 - (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string{
-    if ([currentElement isEqualToString:@"title"]) {
-        [self.currentTitle appendString:string];
-    } else if ([currentElement isEqualToString:@"link"]) {
-        [self.currentLink appendString:string];
-    } else if ([currentElement isEqualToString:@"description"]) {
-        [self.currentDescription appendString:string];
-    } else if ([currentElement isEqualToString:@"content"]) {
-		[self.currentContent appendString:string];
+    if ([currentElement isEqualToString:@"Descricao"]) {
+        [self.currentDescricao appendString:string];
+    } else if ([currentElement isEqualToString:@"Sentido"]) {
+        [self.currentSentido appendString:string];
+    } else if ([currentElement isEqualToString:@"ImgVisWEB"]) {
+        [self.currentImgUrl appendString:string];
+    } else if ([currentElement isEqualToString:@"Latitude"]) {
+		[self.currentLatitude appendString:string];
+    } else if ([currentElement isEqualToString:@"Longitude"]) {
+		[self.currentLongitude appendString:string];
     }
 }
 
@@ -128,6 +133,7 @@
 {
     return _delegate; 
 }
+
 - (void)setDelegate:(id)new_delegate
 {
     _delegate = new_delegate;

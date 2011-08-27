@@ -22,7 +22,7 @@
     
     NSMutableDictionary *item;
     NSString *currentElement;
-    NSMutableString *currentTitle, *currentLink, *currentDescription, *currentContent;
+    NSMutableString *currentDescricao, *currentSentido, *currentImgUrl, *currentLatitude, *currentLongitude;
     
 }
 
@@ -31,10 +31,11 @@
 
 @property (retain, nonatomic) NSMutableDictionary *item;
 @property (retain, nonatomic) NSString *currentElement;
-@property (retain, nonatomic) NSMutableString *currentTitle;
-@property (retain, nonatomic) NSMutableString *currentLink;
-@property (retain, nonatomic) NSMutableString *currentDescription;
-@property (retain, nonatomic) NSMutableString *currentContent;
+@property (retain, nonatomic) NSMutableString *currentDescricao;
+@property (retain, nonatomic) NSMutableString *currentSentido;
+@property (retain, nonatomic) NSMutableString *currentImgUrl;
+@property (retain, nonatomic) NSMutableString *currentLatitude;
+@property (retain, nonatomic) NSMutableString *currentLongitude;
 
 
 - (void)parseRssFeed:(NSString *)url withDelegate:(id)aDelegate;

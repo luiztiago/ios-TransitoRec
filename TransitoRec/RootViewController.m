@@ -7,15 +7,47 @@
 //
 
 #import "RootViewController.h"
-#import "Camera.h"
 
 @implementation RootViewController
-@synthesize items;
+@synthesize pontos;
 @synthesize activityIndicator;
+
+- (void)loadData
+{
+    if (pontos == nil) {
+		[activityIndicator startAnimating];
+		
+		Parser *rssParser = [[Parser alloc] init];
+		[rssParser parseRssFeed:@"http://www.recife.pe.gov.br/transito/recuperarPontos.aspx" withDelegate:self];
+		
+		[rssParser release];
+		
+	} else {
+		[self.tableView reloadData];
+	}
+}
+
+//Implementa o método do ParserDelegate
+- (void)receivedItems:(NSArray *)thePoints
+{
+    pontos = thePoints;
+	[self.tableView reloadData];
+	[activityIndicator stopAnimating];
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+	
+    UIActivityIndicatorView *indicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
+	indicator.hidesWhenStopped = YES;
+	[indicator stopAnimating];
+	self.activityIndicator = indicator;
+	[indicator release];
+	
+	UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithCustomView:indicator];
+	self.navigationItem.rightBarButtonItem = rightButton;
+	[rightButton release];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -25,6 +57,8 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
+    [self loadData];
+    
     [super viewDidAppear:animated];
 }
 
@@ -54,7 +88,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 0;
+    return [pontos count];
 }
 
 // Customize the appearance of table view cells.
@@ -64,11 +98,19 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
     }
-
+    
+    cell.textLabel.text = [[pontos objectAtIndex:indexPath.row] objectForKey:@"Descricao"];
+    cell.detailTextLabel.text = [[pontos objectAtIndex:indexPath.row] objectForKey:@"Sentido"];
+    cell.detailTextLabel.numberOfLines = 2;
+    
     // Configure the cell.
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 70;
 }
 
 /*
