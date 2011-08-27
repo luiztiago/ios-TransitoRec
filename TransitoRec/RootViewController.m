@@ -7,6 +7,7 @@
 //
 
 #import "RootViewController.h"
+#import "DetailViewController.h"
 
 @implementation RootViewController
 @synthesize pontos;
@@ -156,13 +157,24 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    /*
-    <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
+    /*DetailViewController *detailViewController = [[DetailViewController alloc] initWithNibName:@"DetailViewController" bundle:nil];
+    // ...
+    // Pass the selected object to the new view controller.
+    [self.navigationController pushViewController:detailViewController animated:YES];
+    [detailViewController release];*/
+    
+    DetailViewController *detailViewController = [[DetailViewController alloc] initWithNibName:@"DetailViewController" bundle:nil];
+    detailViewController.descricao = [[pontos objectAtIndex:indexPath.row] objectForKey:@"Descricao"];
+    detailViewController.latitude = [[pontos objectAtIndex:indexPath.row] objectForKey:@"Latitude"];
+    detailViewController.longitude = [[pontos objectAtIndex:indexPath.row] objectForKey:@"Longitude"];
+    detailViewController.imagem = [[pontos objectAtIndex:indexPath.row] objectForKey:@"ImgVisWEB"];
+    
     // ...
     // Pass the selected object to the new view controller.
     [self.navigationController pushViewController:detailViewController animated:YES];
     [detailViewController release];
-	*/
+
+    
 }
 
 - (void)didReceiveMemoryWarning

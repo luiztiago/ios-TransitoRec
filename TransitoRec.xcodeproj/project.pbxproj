@@ -16,8 +16,10 @@
 		3AA7BA5A14095373007528BC /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AA7BA5814095373007528BC /* MainWindow.xib */; };
 		3AA7BA5D14095373007528BC /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA7BA5C14095373007528BC /* RootViewController.m */; };
 		3AA7BA6014095373007528BC /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AA7BA5E14095373007528BC /* RootViewController.xib */; };
-		3AA7BA741409541F007528BC /* Camera.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA7BA731409541F007528BC /* Camera.m */; };
 		3AA7BA9314095BBB007528BC /* Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA7BA9214095BBB007528BC /* Parser.m */; };
+		3AA7BAA014096231007528BC /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA7BA9E14096231007528BC /* DetailViewController.m */; };
+		3AA7BAA114096231007528BC /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AA7BA9F14096231007528BC /* DetailViewController.xib */; };
+		3AA7BAA71409642B007528BC /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AA7BAA61409642B007528BC /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,10 +37,12 @@
 		3AA7BA5B14095373007528BC /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		3AA7BA5C14095373007528BC /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		3AA7BA5F14095373007528BC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RootViewController.xib; sourceTree = "<group>"; };
-		3AA7BA721409541F007528BC /* Camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Camera.h; sourceTree = "<group>"; };
-		3AA7BA731409541F007528BC /* Camera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Camera.m; sourceTree = "<group>"; };
 		3AA7BA9114095BBB007528BC /* Parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Parser.h; sourceTree = "<group>"; };
 		3AA7BA9214095BBB007528BC /* Parser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Parser.m; sourceTree = "<group>"; };
+		3AA7BA9D14096231007528BC /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		3AA7BA9E14096231007528BC /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		3AA7BA9F14096231007528BC /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		3AA7BAA61409642B007528BC /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AA7BAA71409642B007528BC /* MapKit.framework in Frameworks */,
 				3AA7BA4714095373007528BC /* UIKit.framework in Frameworks */,
 				3AA7BA4914095373007528BC /* Foundation.framework in Frameworks */,
 				3AA7BA4B14095373007528BC /* CoreGraphics.framework in Frameworks */,
@@ -75,6 +80,7 @@
 		3AA7BA4514095373007528BC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3AA7BAA61409642B007528BC /* MapKit.framework */,
 				3AA7BA4614095373007528BC /* UIKit.framework */,
 				3AA7BA4814095373007528BC /* Foundation.framework */,
 				3AA7BA4A14095373007528BC /* CoreGraphics.framework */,
@@ -92,10 +98,11 @@
 				3AA7BA5C14095373007528BC /* RootViewController.m */,
 				3AA7BA5E14095373007528BC /* RootViewController.xib */,
 				3AA7BA4D14095373007528BC /* Supporting Files */,
-				3AA7BA721409541F007528BC /* Camera.h */,
-				3AA7BA731409541F007528BC /* Camera.m */,
 				3AA7BA9114095BBB007528BC /* Parser.h */,
 				3AA7BA9214095BBB007528BC /* Parser.m */,
+				3AA7BA9D14096231007528BC /* DetailViewController.h */,
+				3AA7BA9E14096231007528BC /* DetailViewController.m */,
+				3AA7BA9F14096231007528BC /* DetailViewController.xib */,
 			);
 			path = TransitoRec;
 			sourceTree = "<group>";
@@ -164,6 +171,7 @@
 				3AA7BA5114095373007528BC /* InfoPlist.strings in Resources */,
 				3AA7BA5A14095373007528BC /* MainWindow.xib in Resources */,
 				3AA7BA6014095373007528BC /* RootViewController.xib in Resources */,
+				3AA7BAA114096231007528BC /* DetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,8 +185,8 @@
 				3AA7BA5314095373007528BC /* main.m in Sources */,
 				3AA7BA5714095373007528BC /* TransitoRecAppDelegate.m in Sources */,
 				3AA7BA5D14095373007528BC /* RootViewController.m in Sources */,
-				3AA7BA741409541F007528BC /* Camera.m in Sources */,
 				3AA7BA9314095BBB007528BC /* Parser.m in Sources */,
+				3AA7BAA014096231007528BC /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
