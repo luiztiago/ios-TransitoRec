@@ -1,0 +1,291 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3AA7BA4714095373007528BC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AA7BA4614095373007528BC /* UIKit.framework */; };
+		3AA7BA4914095373007528BC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AA7BA4814095373007528BC /* Foundation.framework */; };
+		3AA7BA4B14095373007528BC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AA7BA4A14095373007528BC /* CoreGraphics.framework */; };
+		3AA7BA5114095373007528BC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3AA7BA4F14095373007528BC /* InfoPlist.strings */; };
+		3AA7BA5314095373007528BC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA7BA5214095373007528BC /* main.m */; };
+		3AA7BA5714095373007528BC /* TransitoRecAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA7BA5614095373007528BC /* TransitoRecAppDelegate.m */; };
+		3AA7BA5A14095373007528BC /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AA7BA5814095373007528BC /* MainWindow.xib */; };
+		3AA7BA5D14095373007528BC /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA7BA5C14095373007528BC /* RootViewController.m */; };
+		3AA7BA6014095373007528BC /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AA7BA5E14095373007528BC /* RootViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3AA7BA4214095373007528BC /* TransitoRec.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransitoRec.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AA7BA4614095373007528BC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3AA7BA4814095373007528BC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3AA7BA4A14095373007528BC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3AA7BA4E14095373007528BC /* TransitoRec-Info.plist */ = {isa = PBXFileReference; path = "TransitoRec-Info.plist"; sourceTree = "<group>"; };
+		3AA7BA5014095373007528BC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3AA7BA5214095373007528BC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3AA7BA5414095373007528BC /* TransitoRec-Prefix.pch */ = {isa = PBXFileReference; path = "TransitoRec-Prefix.pch"; sourceTree = "<group>"; };
+		3AA7BA5514095373007528BC /* TransitoRecAppDelegate.h */ = {isa = PBXFileReference; path = TransitoRecAppDelegate.h; sourceTree = "<group>"; };
+		3AA7BA5614095373007528BC /* TransitoRecAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransitoRecAppDelegate.m; sourceTree = "<group>"; };
+		3AA7BA5914095373007528BC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		3AA7BA5B14095373007528BC /* RootViewController.h */ = {isa = PBXFileReference; path = RootViewController.h; sourceTree = "<group>"; };
+		3AA7BA5C14095373007528BC /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		3AA7BA5F14095373007528BC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RootViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3AA7BA3F14095373007528BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AA7BA4714095373007528BC /* UIKit.framework in Frameworks */,
+				3AA7BA4914095373007528BC /* Foundation.framework in Frameworks */,
+				3AA7BA4B14095373007528BC /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3AA7BA3714095373007528BC = {
+			isa = PBXGroup;
+			children = (
+				3AA7BA4C14095373007528BC /* TransitoRec */,
+				3AA7BA4514095373007528BC /* Frameworks */,
+				3AA7BA4314095373007528BC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3AA7BA4314095373007528BC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3AA7BA4214095373007528BC /* TransitoRec.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3AA7BA4514095373007528BC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3AA7BA4614095373007528BC /* UIKit.framework */,
+				3AA7BA4814095373007528BC /* Foundation.framework */,
+				3AA7BA4A14095373007528BC /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3AA7BA4C14095373007528BC /* TransitoRec */ = {
+			isa = PBXGroup;
+			children = (
+				3AA7BA5514095373007528BC /* TransitoRecAppDelegate.h */,
+				3AA7BA5614095373007528BC /* TransitoRecAppDelegate.m */,
+				3AA7BA5814095373007528BC /* MainWindow.xib */,
+				3AA7BA5B14095373007528BC /* RootViewController.h */,
+				3AA7BA5C14095373007528BC /* RootViewController.m */,
+				3AA7BA5E14095373007528BC /* RootViewController.xib */,
+				3AA7BA4D14095373007528BC /* Supporting Files */,
+			);
+			path = TransitoRec;
+			sourceTree = "<group>";
+		};
+		3AA7BA4D14095373007528BC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3AA7BA4E14095373007528BC /* TransitoRec-Info.plist */,
+				3AA7BA4F14095373007528BC /* InfoPlist.strings */,
+				3AA7BA5214095373007528BC /* main.m */,
+				3AA7BA5414095373007528BC /* TransitoRec-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3AA7BA4114095373007528BC /* TransitoRec */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3AA7BA6314095373007528BC /* Build configuration list for PBXNativeTarget "TransitoRec" */;
+			buildPhases = (
+				3AA7BA3E14095373007528BC /* Sources */,
+				3AA7BA3F14095373007528BC /* Frameworks */,
+				3AA7BA4014095373007528BC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TransitoRec;
+			productName = TransitoRec;
+			productReference = 3AA7BA4214095373007528BC /* TransitoRec.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3AA7BA3914095373007528BC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "iR4 Consultoria Web";
+			};
+			buildConfigurationList = 3AA7BA3C14095373007528BC /* Build configuration list for PBXProject "TransitoRec" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3AA7BA3714095373007528BC;
+			productRefGroup = 3AA7BA4314095373007528BC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3AA7BA4114095373007528BC /* TransitoRec */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3AA7BA4014095373007528BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AA7BA5114095373007528BC /* InfoPlist.strings in Resources */,
+				3AA7BA5A14095373007528BC /* MainWindow.xib in Resources */,
+				3AA7BA6014095373007528BC /* RootViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3AA7BA3E14095373007528BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AA7BA5314095373007528BC /* main.m in Sources */,
+				3AA7BA5714095373007528BC /* TransitoRecAppDelegate.m in Sources */,
+				3AA7BA5D14095373007528BC /* RootViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3AA7BA4F14095373007528BC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3AA7BA5014095373007528BC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3AA7BA5814095373007528BC /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3AA7BA5914095373007528BC /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		3AA7BA5E14095373007528BC /* RootViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3AA7BA5F14095373007528BC /* en */,
+			);
+			name = RootViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3AA7BA6114095373007528BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3AA7BA6214095373007528BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3AA7BA6414095373007528BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TransitoRec/TransitoRec-Prefix.pch";
+				INFOPLIST_FILE = "TransitoRec/TransitoRec-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3AA7BA6514095373007528BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TransitoRec/TransitoRec-Prefix.pch";
+				INFOPLIST_FILE = "TransitoRec/TransitoRec-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3AA7BA3C14095373007528BC /* Build configuration list for PBXProject "TransitoRec" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3AA7BA6114095373007528BC /* Debug */,
+				3AA7BA6214095373007528BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3AA7BA6314095373007528BC /* Build configuration list for PBXNativeTarget "TransitoRec" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3AA7BA6414095373007528BC /* Debug */,
+				3AA7BA6514095373007528BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3AA7BA3914095373007528BC /* Project object */;
+}
