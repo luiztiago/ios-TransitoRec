@@ -2,7 +2,7 @@
 <archive type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="7.10">
 	<data>
 		<int key="IBDocument.SystemTarget">1056</int>
-		<string key="IBDocument.SystemVersion">11A511</string>
+		<string key="IBDocument.SystemVersion">11B26</string>
 		<string key="IBDocument.InterfaceBuilderVersion">1617</string>
 		<string key="IBDocument.AppKitVersion">1138</string>
 		<string key="IBDocument.HIToolboxVersion">566.00</string>
@@ -16,6 +16,7 @@
 			<string>IBUINavigationController</string>
 			<string>IBUIViewController</string>
 			<string>IBUIImageView</string>
+			<string>IBADBannerView</string>
 			<string>IBMKMapView</string>
 			<string>IBUINavigationBar</string>
 			<string>IBUINavigationItem</string>
@@ -44,7 +45,6 @@
 			</object>
 			<object class="IBUINavigationController" id="452049229">
 				<string key="IBUITitle">DetailViewController</string>
-				<string key="IBUINibName">DetailViewController</string>
 				<object class="IBUISimulatedStatusBarMetrics" key="IBUISimulatedStatusBarMetrics"/>
 				<object class="IBUISimulatedOrientationMetrics" key="IBUISimulatedOrientationMetrics">
 					<int key="IBUIInterfaceOrientation">1</int>
@@ -78,7 +78,7 @@
 										<object class="IBMKMapView" id="1057149661">
 											<reference key="NSNextResponder" ref="533796523"/>
 											<int key="NSvFlags">274</int>
-											<string key="NSFrame">{{0, 201}, {320, 215}}</string>
+											<string key="NSFrame">{{0, 242}, {320, 174}}</string>
 											<reference key="NSSuperview" ref="533796523"/>
 											<reference key="NSWindow"/>
 											<reference key="NSNextKeyView"/>
@@ -90,18 +90,49 @@
 										<object class="IBUIImageView" id="960946905">
 											<reference key="NSNextResponder" ref="533796523"/>
 											<int key="NSvFlags">292</int>
-											<string key="NSFrameSize">{320, 203}</string>
+											<string key="NSFrameSize">{320, 243}</string>
 											<reference key="NSSuperview" ref="533796523"/>
 											<reference key="NSWindow"/>
+											<reference key="NSNextKeyView" ref="1000953591"/>
 											<string key="NSReuseIdentifierKey">_NS:541</string>
 											<bool key="IBUIUserInteractionEnabled">NO</bool>
 											<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+										</object>
+										<object class="IBADBannerView" id="1000953591">
+											<reference key="NSNextResponder" ref="533796523"/>
+											<int key="NSvFlags">306</int>
+											<string key="NSFrameSize">{320, 50}</string>
+											<reference key="NSSuperview" ref="533796523"/>
+											<reference key="NSWindow"/>
+											<reference key="NSNextKeyView" ref="1057149661"/>
+											<string key="NSReuseIdentifierKey">_NS:394</string>
+											<bool key="IBUIOpaque">NO</bool>
+											<bool key="IBUIClipsSubviews">YES</bool>
+											<int key="IBUIContentMode">4</int>
+											<bool key="IBUIMultipleTouchEnabled">YES</bool>
+											<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+											<object class="NSMutableSet" key="IBADRequiredContentSizeIdentifiers">
+												<bool key="EncodedWithXMLCoder">YES</bool>
+												<object class="NSArray" key="set.sortedObjects">
+													<bool key="EncodedWithXMLCoder">YES</bool>
+													<string>ADBannerContentSize320x50</string>
+													<string>ADBannerContentSize480x32</string>
+												</object>
+											</object>
+											<object class="NSSet" key="IBADModernRequiredContentSizeIdentifiers">
+												<bool key="EncodedWithXMLCoder">YES</bool>
+												<object class="NSArray" key="set.sortedObjects">
+													<bool key="EncodedWithXMLCoder">YES</bool>
+													<string>ADBannerContentSizeLandscape</string>
+													<string>ADBannerContentSizePortrait</string>
+												</object>
+											</object>
 										</object>
 									</object>
 									<string key="NSFrameSize">{320, 416}</string>
 									<reference key="NSSuperview" ref="766908558"/>
 									<reference key="NSWindow"/>
-									<reference key="NSNextKeyView"/>
+									<reference key="NSNextKeyView" ref="960946905"/>
 									<string key="NSReuseIdentifierKey">_NS:180</string>
 									<object class="NSColor" key="IBUIBackgroundColor">
 										<int key="NSColorSpace">3</int>
@@ -168,6 +199,14 @@
 					</object>
 					<int key="connectionID">25</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">rec_ad</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="1000953591"/>
+					</object>
+					<int key="connectionID">36</int>
+				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<object class="NSArray" key="orderedObjects">
@@ -230,6 +269,7 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="1057149661"/>
 							<reference ref="960946905"/>
+							<reference ref="1000953591"/>
 						</object>
 						<reference key="parent" ref="766908558"/>
 					</object>
@@ -251,6 +291,11 @@
 						<reference key="object" ref="960946905"/>
 						<reference key="parent" ref="533796523"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">26</int>
+						<reference key="object" ref="1000953591"/>
+						<reference key="parent" ref="533796523"/>
+					</object>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="flattenedProperties">
@@ -265,6 +310,7 @@
 					<string>13.IBPluginDependency</string>
 					<string>17.IBPluginDependency</string>
 					<string>24.IBPluginDependency</string>
+					<string>26.IBPluginDependency</string>
 					<string>6.IBPluginDependency</string>
 					<string>7.IBPluginDependency</string>
 					<string>8.IBPluginDependency</string>
@@ -275,6 +321,7 @@
 					<string>DetailViewController</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>UIResponder</string>
+					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -298,7 +345,7 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">25</int>
+			<int key="maxID">36</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -313,12 +360,14 @@
 							<string>imgUrl</string>
 							<string>mapUrl</string>
 							<string>photo</string>
+							<string>rec_ad</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>UIWebView</string>
 							<string>MKMapView</string>
 							<string>UIImageView</string>
+							<string>ADBannerView</string>
 						</object>
 					</object>
 					<object class="NSMutableDictionary" key="toOneOutletInfosByName">
@@ -328,6 +377,7 @@
 							<string>imgUrl</string>
 							<string>mapUrl</string>
 							<string>photo</string>
+							<string>rec_ad</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
@@ -342,6 +392,10 @@
 							<object class="IBToOneOutletInfo">
 								<string key="name">photo</string>
 								<string key="candidateClassName">UIImageView</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">rec_ad</string>
+								<string key="candidateClassName">ADBannerView</string>
 							</object>
 						</object>
 					</object>

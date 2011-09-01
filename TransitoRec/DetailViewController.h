@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "MapKit/MapKit.h"
+#import "iAd/iAd.h"
 
-@interface DetailViewController : UIViewController {
+@interface DetailViewController : UIViewController <ADBannerViewDelegate> {
     NSString *descricao;
     NSString *latitude;
     NSString *longitude;
@@ -18,6 +19,8 @@
     UIWebView *imgUrl;
     MKMapView *mapUrl;
     UIImageView *photo;
+    ADBannerView *rec_ad;
+    BOOL bannerIsVisible;
 }
 @property (nonatomic, retain) NSString *descricao;
 @property (nonatomic, retain) NSString *latitude;
@@ -27,5 +30,7 @@
 @property (nonatomic, retain) IBOutlet UIWebView *imgUrl;
 @property (nonatomic, retain) IBOutlet MKMapView *mapUrl;
 @property (nonatomic, retain) IBOutlet UIImageView *photo;
+@property (nonatomic, retain) IBOutlet ADBannerView *rec_ad;
+@property BOOL bannerIsVisible;
 
 @end

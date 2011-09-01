@@ -17,7 +17,9 @@
 @synthesize imgUrl;
 @synthesize mapUrl;
 @synthesize photo;
+@synthesize rec_ad;
 @synthesize imageFromBundle;
+@synthesize bannerIsVisible;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -85,6 +87,11 @@
     imageFromBundle = [[UIImage alloc] initWithData:imageData];
     [self.photo setImage:imageFromBundle];
     
+    //ADBannerView *adView = [[ADBannerView alloc] initWithFrame:CGRectZero];
+    rec_ad.currentContentSizeIdentifier = ADBannerContentSizeIdentifierPortrait;
+    
+    [self.view addSubview:rec_ad];
+    
     // Do any additional setup after loading the view from its nib.
 }
                                    
@@ -97,13 +104,41 @@
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
+- (void)bannerViewDidLoadAd:(ADBannerView *)banner
+{
+    if (!self.bannerIsVisible)
+    {
+        [banner setDelegate:self];
+        [UIView beginAnimations:@"animateAdBannerOn" context:NULL];
+        // Assumes the banner view is just off the bottom of the screen.
+        rec_ad.frame = CGRectOffset(rec_ad.frame, 0, -rec_ad.frame.size.height);
+        [UIView commitAnimations];
+        rec_ad.hidden = false;
+        self.bannerIsVisible = YES;
+    }
+}
+
+- (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error
+{
+    [banner setDelegate:self];
+    if (self.bannerIsVisible)
+    {
+        
+        [UIView beginAnimations:@"animateAdBannerOff" context:NULL];
+        // Assumes the banner view is placed at the bottom of the screen.
+        rec_ad.frame = CGRectOffset(rec_ad.frame, 0, rec_ad.frame.size.height);
+        [UIView commitAnimations];
+        rec_ad.hidden = true;
+        self.bannerIsVisible = NO;
+    }
+}
+
 - (void)refreshView {
 
     [self.photo setImage:nil];
     [self.photo setImage:imageFromBundle];
     
 }
-
 
 - (void)viewDidUnload
 {
@@ -113,6 +148,7 @@
     [self setImgUrl:nil];
     [self setMapUrl:nil];
     [self setPhoto:nil];
+    [self setRec_ad:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -132,6 +168,7 @@
     [imgUrl release];
     [mapUrl release];
     [photo release];
+    [rec_ad release];
     [super dealloc];
 }
 @end

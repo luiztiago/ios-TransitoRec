@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A5D45A6140F4E6C009157C4 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A5D45A5140F4E6C009157C4 /* iAd.framework */; };
 		3AA7BA4714095373007528BC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AA7BA4614095373007528BC /* UIKit.framework */; };
 		3AA7BA4914095373007528BC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AA7BA4814095373007528BC /* Foundation.framework */; };
 		3AA7BA4B14095373007528BC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AA7BA4A14095373007528BC /* CoreGraphics.framework */; };
@@ -27,7 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3AA7BA4214095373007528BC /* TransitoRec.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransitoRec.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A5D45A5140F4E6C009157C4 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		3AA7BA4214095373007528BC /* Monitora Recife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Monitora Recife.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AA7BA4614095373007528BC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3AA7BA4814095373007528BC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3AA7BA4A14095373007528BC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -58,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A5D45A6140F4E6C009157C4 /* iAd.framework in Frameworks */,
 				3AA7BAA71409642B007528BC /* MapKit.framework in Frameworks */,
 				3AA7BA4714095373007528BC /* UIKit.framework in Frameworks */,
 				3AA7BA4914095373007528BC /* Foundation.framework in Frameworks */,
@@ -84,7 +87,7 @@
 		3AA7BA4314095373007528BC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3AA7BA4214095373007528BC /* TransitoRec.app */,
+				3AA7BA4214095373007528BC /* Monitora Recife.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -92,6 +95,7 @@
 		3AA7BA4514095373007528BC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3A5D45A5140F4E6C009157C4 /* iAd.framework */,
 				3AA7BAA61409642B007528BC /* MapKit.framework */,
 				3AA7BA4614095373007528BC /* UIKit.framework */,
 				3AA7BA4814095373007528BC /* Foundation.framework */,
@@ -147,7 +151,7 @@
 			);
 			name = TransitoRec;
 			productName = TransitoRec;
-			productReference = 3AA7BA4214095373007528BC /* TransitoRec.app */;
+			productReference = 3AA7BA4214095373007528BC /* Monitora Recife.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -289,7 +293,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TransitoRec/TransitoRec-Prefix.pch";
 				INFOPLIST_FILE = "TransitoRec/TransitoRec-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Monitora Recife";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -300,7 +304,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TransitoRec/TransitoRec-Prefix.pch";
 				INFOPLIST_FILE = "TransitoRec/TransitoRec-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Monitora Recife";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

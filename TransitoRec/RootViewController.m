@@ -106,8 +106,16 @@
     }
     
     cell.textLabel.text = [[pontos objectAtIndex:indexPath.row] objectForKey:@"Descricao"];
-    cell.detailTextLabel.text = [[pontos objectAtIndex:indexPath.row] objectForKey:@"Sentido"];
-    cell.detailTextLabel.numberOfLines = 2;
+    cell.textLabel.lineBreakMode = UILineBreakModeWordWrap;
+    cell.textLabel.numberOfLines = 2;
+    UIFont *cellFont = [UIFont fontWithName:@"Helvetica-Bold" size:16.0];
+    cell.textLabel.font = cellFont;
+    
+    NSString *pattern = @"Sentido ";
+    NSString *sentido = [[pontos objectAtIndex:indexPath.row] objectForKey:@"Sentido"];
+    NSString *lineDetail = [NSString stringWithFormat:@"%@%@", pattern, sentido];
+    
+    cell.detailTextLabel.text = lineDetail;
     
     // Configure the cell.
     return cell;
