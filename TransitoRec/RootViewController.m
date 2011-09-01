@@ -39,6 +39,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [self.navigationController setTitle:@"Monitora Recife"];
+    [self.navigationItem setTitle:@"Monitora Recife"];
 	
     UIActivityIndicatorView *indicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
 	indicator.hidesWhenStopped = YES;

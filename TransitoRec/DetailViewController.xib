@@ -15,7 +15,7 @@
 			<string>IBProxyObject</string>
 			<string>IBUINavigationController</string>
 			<string>IBUIViewController</string>
-			<string>IBUIWebView</string>
+			<string>IBUIImageView</string>
 			<string>IBMKMapView</string>
 			<string>IBUINavigationBar</string>
 			<string>IBUINavigationItem</string>
@@ -87,27 +87,21 @@
 											<bool key="IBUIMultipleTouchEnabled">YES</bool>
 											<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 										</object>
-										<object class="IBUIWebView" id="1054301919">
+										<object class="IBUIImageView" id="960946905">
 											<reference key="NSNextResponder" ref="533796523"/>
 											<int key="NSvFlags">292</int>
 											<string key="NSFrameSize">{320, 203}</string>
 											<reference key="NSSuperview" ref="533796523"/>
 											<reference key="NSWindow"/>
-											<reference key="NSNextKeyView" ref="1057149661"/>
-											<string key="NSReuseIdentifierKey">_NS:667</string>
-											<object class="NSColor" key="IBUIBackgroundColor">
-												<int key="NSColorSpace">1</int>
-												<bytes key="NSRGB">MSAxIDEAA</bytes>
-											</object>
+											<string key="NSReuseIdentifierKey">_NS:541</string>
+											<bool key="IBUIUserInteractionEnabled">NO</bool>
 											<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-											<int key="IBUIDataDetectorTypes">1</int>
-											<bool key="IBUIDetectsPhoneNumbers">YES</bool>
 										</object>
 									</object>
 									<string key="NSFrameSize">{320, 416}</string>
 									<reference key="NSSuperview" ref="766908558"/>
 									<reference key="NSWindow"/>
-									<reference key="NSNextKeyView" ref="1054301919"/>
+									<reference key="NSNextKeyView"/>
 									<string key="NSReuseIdentifierKey">_NS:180</string>
 									<object class="NSColor" key="IBUIBackgroundColor">
 										<int key="NSColorSpace">3</int>
@@ -152,14 +146,6 @@
 				<bool key="EncodedWithXMLCoder">YES</bool>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">imgUrl</string>
-						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="1054301919"/>
-					</object>
-					<int key="connectionID">15</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">mapUrl</string>
 						<reference key="source" ref="372490531"/>
 						<reference key="destination" ref="1057149661"/>
@@ -176,11 +162,11 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">delegate</string>
-						<reference key="source" ref="1054301919"/>
-						<reference key="destination" ref="533796523"/>
+						<string key="label">photo</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="960946905"/>
 					</object>
-					<int key="connectionID">19</int>
+					<int key="connectionID">25</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -243,7 +229,7 @@
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="1057149661"/>
-							<reference ref="1054301919"/>
+							<reference ref="960946905"/>
 						</object>
 						<reference key="parent" ref="766908558"/>
 					</object>
@@ -253,17 +239,17 @@
 						<reference key="parent" ref="533796523"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">14</int>
-						<reference key="object" ref="1054301919"/>
-						<reference key="parent" ref="533796523"/>
-					</object>
-					<object class="IBObjectRecord">
 						<int key="objectID">9</int>
 						<reference key="object" ref="756587760"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 						</object>
 						<reference key="parent" ref="656365747"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">24</int>
+						<reference key="object" ref="960946905"/>
+						<reference key="parent" ref="533796523"/>
 					</object>
 				</object>
 			</object>
@@ -277,8 +263,8 @@
 					<string>-2.IBPluginDependency</string>
 					<string>10.IBPluginDependency</string>
 					<string>13.IBPluginDependency</string>
-					<string>14.IBPluginDependency</string>
 					<string>17.IBPluginDependency</string>
+					<string>24.IBPluginDependency</string>
 					<string>6.IBPluginDependency</string>
 					<string>7.IBPluginDependency</string>
 					<string>8.IBPluginDependency</string>
@@ -312,7 +298,7 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">23</int>
+			<int key="maxID">25</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -326,11 +312,13 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>imgUrl</string>
 							<string>mapUrl</string>
+							<string>photo</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>UIWebView</string>
 							<string>MKMapView</string>
+							<string>UIImageView</string>
 						</object>
 					</object>
 					<object class="NSMutableDictionary" key="toOneOutletInfosByName">
@@ -339,6 +327,7 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>imgUrl</string>
 							<string>mapUrl</string>
+							<string>photo</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
@@ -349,6 +338,10 @@
 							<object class="IBToOneOutletInfo">
 								<string key="name">mapUrl</string>
 								<string key="candidateClassName">MKMapView</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">photo</string>
+								<string key="candidateClassName">UIImageView</string>
 							</object>
 						</object>
 					</object>

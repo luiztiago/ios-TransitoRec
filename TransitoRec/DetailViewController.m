@@ -16,6 +16,8 @@
 @synthesize imagem;
 @synthesize imgUrl;
 @synthesize mapUrl;
+@synthesize photo;
+@synthesize imageFromBundle;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -44,20 +46,20 @@
     [self.navigationItem setTitle:descricao];
     
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] 
-                                   initWithTitle:@"Back"                                            
+                                   initWithTitle:@"Voltar"                                            
                                    style:UIBarButtonItemStyleBordered 
                                    target:self 
                                    action:@selector(backHome)];
     self.navigationItem.leftBarButtonItem = backButton;
     [backButton release];
     
-    UIBarButtonItem *refreshButton = [[UIBarButtonItem alloc] 
+    /*UIBarButtonItem *refreshButton = [[UIBarButtonItem alloc] 
                                    initWithTitle:@"F5"                                            
                                    style:UIBarButtonItemStyleBordered 
                                    target:self 
                                    action:@selector(refreshView)];
     self.navigationItem.rightBarButtonItem = refreshButton;
-    [refreshButton release];
+    [refreshButton release];*/
     
     CLLocationCoordinate2D location = self.mapUrl.userLocation.coordinate;
     location.latitude = [self.latitude doubleValue];
@@ -79,19 +81,27 @@
     NSURLRequest *request = [NSURLRequest requestWithURL:urlText];
     [self.imgUrl loadRequest:request];
     
+    NSData *imageData = [NSData dataWithContentsOfURL:urlText];
+    imageFromBundle = [[UIImage alloc] initWithData:imageData];
+    [self.photo setImage:imageFromBundle];
+    
     // Do any additional setup after loading the view from its nib.
 }
                                    
 - (void)backHome {
-    RootViewController *rootViewController = [[RootViewController alloc] initWithNibName:@"RootViewController" bundle:nil];
+    //RootViewController *rootViewController = [[RootViewController alloc] initWithNibName:@"RootViewController" bundle:nil];
     // ...
     // Pass the selected object to the new view controller.
-    [self.navigationController pushViewController:rootViewController animated:YES];
-    [rootViewController release];
+    //[self.navigationController pushViewController:rootViewController animated:YES];
+    //[rootViewController release];
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 - (void)refreshView {
-    [self.imgUrl reload];
+
+    [self.photo setImage:nil];
+    [self.photo setImage:imageFromBundle];
+    
 }
 
 
@@ -102,6 +112,7 @@
     [self setImagem:nil];
     [self setImgUrl:nil];
     [self setMapUrl:nil];
+    [self setPhoto:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -120,6 +131,7 @@
     [imagem release];
     [imgUrl release];
     [mapUrl release];
+    [photo release];
     [super dealloc];
 }
 @end

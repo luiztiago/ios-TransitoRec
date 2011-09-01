@@ -14,14 +14,18 @@
     NSString *latitude;
     NSString *longitude;
     NSString *imagem;
+    UIImage *imageFromBundle;
     UIWebView *imgUrl;
     MKMapView *mapUrl;
+    UIImageView *photo;
 }
 @property (nonatomic, retain) NSString *descricao;
 @property (nonatomic, retain) NSString *latitude;
 @property (nonatomic, retain) NSString *longitude;
 @property (nonatomic, retain) NSString *imagem;
+@property (nonatomic, retain) UIImage *imageFromBundle;
 @property (nonatomic, retain) IBOutlet UIWebView *imgUrl;
 @property (nonatomic, retain) IBOutlet MKMapView *mapUrl;
+@property (nonatomic, retain) IBOutlet UIImageView *photo;
 
 @end
