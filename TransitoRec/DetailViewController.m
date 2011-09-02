@@ -8,6 +8,7 @@
 
 #import "DetailViewController.h"
 #import "RootViewController.h"
+#import "AddressAnnotation.h"
 
 @implementation DetailViewController
 @synthesize descricao;
@@ -69,6 +70,10 @@
     
     MKCoordinateSpan span = {.latitudeDelta = 0.01, .longitudeDelta = 0.01};
     MKCoordinateRegion region = {location, span};
+    
+    AddressAnnotation *addAnnotation = [[AddressAnnotation alloc] initWithCoordinate:location];
+    [mapUrl addAnnotation:addAnnotation];
+    [addAnnotation release];
     
     [self.mapUrl setRegion:region];
     
